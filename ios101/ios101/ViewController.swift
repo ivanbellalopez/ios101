@@ -42,20 +42,17 @@ private extension ViewController {
             verticalStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
 
-
         // TO DO. Create a new UIViewController file called DetailViewController
         // 1. Create a UIStackView with a UITextField, UIButton and a UILabel
         // 2. Tapping the button prints the text in UITextField in the UILabel
-
-
         // 1. Add a close button in the navigation bar
-        // 2. Implement the function to go back to the previous view
+        // 2. Implement the function to go dismiss itself
 
-        // TO DO. Show modally the DetailViewController when tapping `detailButton`
-
+        // TO DO (here). Show modally the DetailViewController when tapping `detailButton`
     }
 
     @objc func goToDetail() {
-        navigationController?.present(UIViewController(), animated: true, completion: nil)
+        let detailNavigation = UINavigationController(rootViewController: DetailViewController())
+        navigationController?.present(detailNavigation, animated: true, completion: nil)
     }
 }
